@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bluhm6dyu7uuf"]
+
+[ext_resource type="Script" path="res://Scenes/Shapes/spawner.gd" id="1_hd6eo"]
+[ext_resource type="PackedScene" uid="uid://dfuveb4kmccdb" path="res://Scenes/Shapes/shapes.tscn" id="2_1ds5n"]
+
+[node name="Spawner" type="Node2D"]
+script = ExtResource("1_hd6eo")
+shapes_library = ExtResource("2_1ds5n")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="SpawnPoint" type="Marker2D" parent="."]
+position = Vector2(1544, 581)
+
+[node name="DeathPoint" type="Marker2D" parent="."]
+position = Vector2(-415, 626)
+
+[node name="ShapesContainer" type="Node2D" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

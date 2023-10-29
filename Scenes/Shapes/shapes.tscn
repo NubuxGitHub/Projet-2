@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfuveb4kmccdb"]
+
+[ext_resource type="Script" path="res://Scenes/Shapes/shapes.gd" id="1_i0e82"]
+
+[node name="Shapes" type="Node2D" node_paths=PackedStringArray("shapes_library")]
+script = ExtResource("1_i0e82")
+shapes_library = [NodePath("01"), NodePath("02"), NodePath("03"), NodePath("04"), NodePath("05")]
+
+[node name="01" type="Polygon2D" parent="."]
+visible = false
+color = Color(0.25098, 0.25098, 0.25098, 1)
+polygon = PackedVector2Array(-171, -1, -180, -101, -143, -183, -200, -234, -128, -295, -86, -222, -19, -214, 63, -232, 81, -313, 189, -248, 91, -180, 115, -45, 115, 0)
+
+[node name="02" type="Polygon2D" parent="."]
+visible = false
+color = Color(0.282353, 0.282353, 0.282353, 1)
+polygon = PackedVector2Array(-171, -1, -280, -93, -223, -140, -209, -256, -116, -212, -22, -201, 63, -232, 81, -313, 189, -248, 266, -280, 218, -88, 115, 0)
+
+[node name="03" type="Polygon2D" parent="."]
+visible = false
+color = Color(0.384314, 0.384314, 0.384314, 1)
+polygon = PackedVector2Array(-91, 4, -208, -57, -112, -124, -136, -239, -239, -337, -19, -379, 65, -311, 174, -330, 189, -248, 266, -280, 90, -95, 39, 1)
+
+[node name="04" type="Polygon2D" parent="."]
+visible = false
+color = Color(0.427451, 0.427451, 0.427451, 1)
+polygon = PackedVector2Array(-91, 4, -208, -57, -112, -124, -49, -109, 63, -266, 174, -330, 450, -298, 293, -165, 90, -95, 39, 1)
+
+[node name="05" type="Polygon2D" parent="."]
+visible = false
+color = Color(0.439216, 0.439216, 0.439216, 1)
+polygon = PackedVector2Array(-91, 4, -81, -70, -314, -120, -314, -235, -205, -236, -12, -124, 190, -147, 251, -76, 142, -42, 90, -95, 39, 1)

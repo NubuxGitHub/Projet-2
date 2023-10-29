@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cenotago0nbr0"]
+
+[ext_resource type="Script" path="res://Scenes/world.gd" id="1_de8tl"]
+[ext_resource type="PackedScene" uid="uid://c25ur035ek53c" path="res://Scenes/player.tscn" id="2_6qt2m"]
+[ext_resource type="PackedScene" uid="uid://bluhm6dyu7uuf" path="res://Scenes/Shapes/spawner.tscn" id="3_cr25t"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_de8tl")
+
+[node name="Spawner" parent="." instance=ExtResource("3_cr25t")]
+
+[node name="Player" parent="." instance=ExtResource("2_6qt2m")]
+position = Vector2(584, 543)
+
+[node name="wrlDebug" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0

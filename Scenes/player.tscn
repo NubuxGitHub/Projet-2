@@ -1,0 +1,81 @@
+[gd_scene load_steps=12 format=3 uid="uid://c25ur035ek53c"]
+
+[ext_resource type="Script" path="res://Scenes/player.gd" id="1_487oe"]
+[ext_resource type="Texture2D" uid="uid://bgd7ijxgv80ex" path="res://Assets/Art/walk_cycle.png" id="1_pse21"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o7rys"]
+atlas = ExtResource("1_pse21")
+region = Rect2(0, 0, 115, 204)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8dq8m"]
+atlas = ExtResource("1_pse21")
+region = Rect2(115, 0, 115, 204)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yl7at"]
+atlas = ExtResource("1_pse21")
+region = Rect2(230, 0, 115, 204)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5sd6i"]
+atlas = ExtResource("1_pse21")
+region = Rect2(345, 0, 115, 204)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2xon"]
+atlas = ExtResource("1_pse21")
+region = Rect2(460, 0, 115, 204)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w21gm"]
+atlas = ExtResource("1_pse21")
+region = Rect2(575, 0, 115, 204)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e10s8"]
+atlas = ExtResource("1_pse21")
+region = Rect2(690, 0, 115, 204)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_krgg3"]
+atlas = ExtResource("1_pse21")
+region = Rect2(805, 0, 115, 204)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ij0yo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o7rys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8dq8m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yl7at")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5sd6i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2xon")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w21gm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e10s8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_krgg3")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_487oe")
+
+[node name="AnimSprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ij0yo")
+animation = &"walk"
+
+[node name="debug" type="Label" parent="."]
+offset_left = -18.0
+offset_top = -129.0
+offset_right = 22.0
+offset_bottom = -106.0
